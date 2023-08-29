@@ -16,6 +16,17 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)"],
         mont: ["var(--font-mont)"],
+        opensans: ["var(--font-open)"],
+      },
+      colors: {
+        blue: {
+          dark: "#0C244B",
+          navy: "#092E6B",
+        },
+        pink: {
+          dark: "#FF63A4",
+          light: "#FDACCE",
+        },
       },
     },
   },

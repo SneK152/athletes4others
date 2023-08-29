@@ -2,17 +2,41 @@
 
 import { Popover } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { navLinks } from "./navLinks";
 import { usePageContext } from "./context";
 
 export default function Navbar() {
+  const context = usePageContext();
+  useEffect(() => {
+    const eventHandler = () => {
+      const sections = document.querySelectorAll("section");
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        console.log(sectionTop, sectionHeight, window.scrollY);
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+          current = "#" + section.getAttribute("id") || "";
+        }
+      });
+      console.log(current);
+      context.setCurrentPage(current);
+    };
+
+    window.addEventListener("scroll", eventHandler);
+
+    eventHandler();
+    return () => {
+      window.removeEventListener("scroll", eventHandler);
+    };
+  }, [context]);
   return (
-    <Popover as="nav" className="bg-lightgreen z-50 fixed w-full shadow-lg">
+    <Popover as="nav" className="bg-blue-dark z-50 fixed w-full">
       {({ open }) => (
         <div className="padded-section">
-          <div className="mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-16">
+          <div className="mx-auto px-2 sm:px-4 lg:px-4">
+            <div className="relative flex items-center justify-between h-14">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-darkgreen focus:outline-none focus:ring-2 focus:ring-inset focus:ring-darkgreen">
                   <span className="sr-only">Open main menu</span>
@@ -24,9 +48,11 @@ export default function Navbar() {
                 </Popover.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-between">
-                <p className="font-bold font-display text-xl">
-                  Athletes4Others
-                </p>
+                <div className="font-bold items-center text-white text-2xl flex uppercase">
+                  Athletes
+                  <div className="text-lg text-pink-light px-[0.05rem]">4</div>
+                  Others
+                </div>
                 <div className="hidden sm:block">
                   <ul className="flex gap-4 items-center h-full">
                     {navLinks.map((item) => (
@@ -96,8 +122,8 @@ function NavLink(props: NavLinkProps) {
   return (
     <li
       className={`${
-        "" // context.currentPage === props.href ? "font-bold" : ""
-      } text-base`}
+        context.currentPage === props.href ? "text-pink-light" : "text-white"
+      } text-lg font-mont`}
     >
       <button
         onClick={() => {
