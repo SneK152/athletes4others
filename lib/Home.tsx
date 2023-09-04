@@ -46,7 +46,7 @@ export default function Home() {
         <br />
         <a
           className="bg-blue-dark px-10 font-sans text-xl py-3 block rounded-lg text-white"
-          href="https://google.com"
+          href="https://tinyurl.com/A4Ointerest"
           target="_blank"
           rel="noopener noreferrer"
         >
