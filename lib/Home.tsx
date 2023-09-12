@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Section from "./Section";
+import { usePageContext } from "./context";
 
 export default function Home() {
+  const context = usePageContext();
   return (
     <Section name="home">
       <div className="flex flex-col items-center justify-center w-full gap-3 py-3 px-10">
@@ -34,6 +38,17 @@ export default function Home() {
               <li>Ace Schools</li>
               <li>Bishops</li>
             </ul>
+            <button
+              className="bg-blue-dark px-10 font-sans text-lg py-2 my-2 block rounded-lg text-white hover:bg-pink-light hover:text-black transition-colors duration-300"
+              onClick={() => {
+                context.setCurrentPage("#whatwevedone");
+                document.getElementById("whatwevedone")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Learn More
+            </button>
           </div>
           <div className="md:w-[50%] flex flex-col gap-2 items-center">
             <h1 className="font-mont text-4xl text-white">What We Cover</h1>
@@ -41,11 +56,22 @@ export default function Home() {
               <li>Current Opportunities</li>
               <li>Coaching</li>
             </ul>
+            <button
+              className="bg-blue-dark px-10 font-sans text-lg py-2 my-2 block rounded-lg text-white hover:bg-pink-light hover:text-black transition-colors duration-300"
+              onClick={() => {
+                context.setCurrentPage("#opportunities");
+                document.getElementById("opportunities")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Learn More
+            </button>
           </div>
         </div>
         <br />
         <a
-          className="bg-blue-dark px-10 font-sans text-xl py-3 block rounded-lg text-white"
+          className="bg-blue-dark w-full text-center font-sans text-xl py-3 block rounded-lg text-white hover:bg-pink-light hover:text-black transition-colors duration-300"
           href="https://tinyurl.com/A4Ointerest"
           target="_blank"
           rel="noopener noreferrer"
