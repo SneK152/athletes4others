@@ -4,11 +4,9 @@ export default function Section({
   ...restprops
 }: React.ComponentPropsWithoutRef<"section"> & { name: string }) {
   return (
-    <>
-      <div className="h-14"></div>
-      <section {...restprops} id={name}>
-        {children}
-      </section>
-    </>
+    <section {...restprops} id={name}>
+      <div className="h-16"></div>
+      {children}
+    </section>
   );
 }

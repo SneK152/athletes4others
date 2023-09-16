@@ -18,12 +18,14 @@ export default function Team() {
             key={i}
             className="flex flex-col items-center justify-center w-full"
           >
-            <Image
-              src="/hero_image.png"
-              height={150}
-              width={150}
-              alt="A person helping another"
-            />
+            <div className="relative aspect-square w-[70%]">
+              <Image
+                src="/hero_image.png"
+                fill
+                objectFit="cover"
+                alt="A person helping another"
+              />
+            </div>
             <br />
             <h2 className="font-sans text-white text-xl text-center">
               {person[1]}
