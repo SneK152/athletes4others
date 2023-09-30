@@ -2,6 +2,7 @@ import { ContextProvider } from "@/lib/context";
 import "./globals.css";
 import { Inter, Open_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import { Metadata } from "next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,6 +26,26 @@ const mont = localFont({
   display: "swap",
   variable: "--font-mont",
 });
+
+export const metadata: Metadata = {
+  title: "Athletes4Others",
+  description:
+    "Providing Lynbrook students with opportunities to coach athletics for underprivileged and underrepresented youth communities.",
+  openGraph: {
+    type: "website",
+    title: "Athletes4Others",
+    description:
+      "Providing Lynbrook students with opportunities to coach athletics for underprivileged and underrepresented youth communities.",
+    locale: "en_US",
+    siteName: "Athletes4Others",
+    url: "https://athletes4others.vercel.app",
+  },
+  robots: {
+    follow: true,
+    index: true,
+  },
+  manifest: "/site.webmanifest",
+};
 
 export default function RootLayout({
   children,

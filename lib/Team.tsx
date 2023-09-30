@@ -7,7 +7,7 @@ export default function Team() {
       <h1 className="font-sans text-white uppercase text-5xl text-center font-bold">
         Meet the Team
       </h1>
-      <div className="flex md:flex-row flex-col justify-center items-center gap-2 py-5">
+      <div className="flex gap-5 md:gap-0 md:flex-row flex-col justify-center items-center py-5">
         {[
           ["President", "Lorem Ipsum"],
           ["Vice President", "Lorem Ipsum"],

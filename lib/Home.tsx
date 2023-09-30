@@ -16,12 +16,14 @@ export default function Home() {
           width={100}
           alt="A person helping another"
         />
-        <h1 className="font-bold items-center text-white text-7xl flex uppercase">
+        <h1 className="font-bold items-center flex-col md:flex-row text-white text-6xl md:text-7xl flex uppercase">
           Athletes
-          <span className="text-5xl text-pink-light px-[0.05rem]">4</span>
+          <span className="text-5xl md:text-5xl text-pink-light px-[0.05rem]">
+            4
+          </span>
           Others
         </h1>
-        <h2 className="font-mont text-white text-5xl">
+        <h2 className="font-mont text-white text-5xl text-center">
           Tuesday Brunch in Room 503
         </h2>
         <p className="text-white text-2xl italic font-normal font-opensans text-center max-w-[60ch]">
@@ -31,7 +33,7 @@ export default function Home() {
           communities.
         </p>
         <br />
-        <div className="flex w-full flex-col md:flex-row">
+        <div className="flex w-full flex-col gap-5 md:flex-row">
           <div className="md:w-[50%] flex flex-col gap-2 items-center">
             <h1 className="font-mont text-4xl text-white">Current Projects</h1>
             <ul className="list-disc text-white font-sans text-3xl">
@@ -53,7 +55,7 @@ export default function Home() {
           <div className="md:w-[50%] flex flex-col gap-2 items-center">
             <h1 className="font-mont text-4xl text-white">What We Cover</h1>
             <ul className="list-disc text-white font-sans text-3xl">
-              <li>Current Opportunities</li>
+              <li>Opportunities</li>
               <li>Coaching</li>
             </ul>
             <button

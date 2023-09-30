@@ -15,12 +15,12 @@ export default function Navbar() {
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        console.log(sectionTop, sectionHeight, window.scrollY);
+        // console.log(sectionTop, sectionHeight, window.scrollY);
         if (window.scrollY >= sectionTop - sectionHeight / 3) {
           current = "#" + section.getAttribute("id") || "";
         }
       });
-      console.log(current);
+      // console.log(current);
       context.setCurrentPage(current);
     };
 
@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="mx-auto px-2 sm:px-4 lg:px-4">
             <div className="relative flex items-center justify-between h-14">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-darkgreen focus:outline-none focus:ring-2 focus:ring-inset focus:ring-darkgreen">
+                <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -76,7 +76,7 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <Popover.Panel className="sm:hidden absolute bg-lightgreen w-full z-50">
+          <Popover.Panel className="sm:hidden absolute bg-blue-navy w-full z-50">
             {({ close }) => (
               <ul className="px-2 pt-2 pb-3 space-y-1">
                 {/* {navLinks.map((item) => (
