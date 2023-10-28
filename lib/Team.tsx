@@ -7,13 +7,13 @@ export default function Team() {
       <h1 className="font-sans text-white uppercase text-5xl text-center font-bold">
         Meet the Team
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-5 place-items-center py-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-5 place-items-center items-start py-5 px-3">
         {[
           ["President", "Harsha Kadiyala"],
           ["VP of Operations", "Samir Mehra"],
           ["VP of Outreach", "Jeffrey Gao"],
-          ["Treasurer", "Nina Pan"],
           ["Secretary", "Kylie Liao"],
+          ["Treasurer", "Nina Pan"],
           ["Director of Soccer", "Uzayr Zameer"],
           ["Director of Basketball", "Eric Huang"],
         ].map((person, i) => (
@@ -23,7 +23,7 @@ export default function Team() {
           >
             <div className="relative aspect-square w-full">
               <Image
-                src="/hero_image.png"
+                src={`/${person[1].split(" ")[0]}.jpg`}
                 fill
                 objectFit="cover"
                 alt="A person helping another"

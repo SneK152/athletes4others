@@ -37,14 +37,14 @@ export default function Home() {
           <div className="md:w-[50%] flex flex-col gap-2 items-center">
             <h1 className="font-mont text-4xl text-white">Current Projects</h1>
             <ul className="list-disc text-white font-sans text-3xl">
-              <li>Ace Schools</li>
-              <li>Bishops</li>
+              <li>Basketball Clinics</li>
+              <li>Soccer Practices</li>
             </ul>
             <button
               className="bg-blue-dark px-10 font-sans text-lg py-2 my-2 block rounded-lg text-white hover:bg-pink-light hover:text-black transition-colors duration-300"
               onClick={() => {
-                context.setCurrentPage("#whatwevedone");
-                document.getElementById("whatwevedone")?.scrollIntoView({
+                context.setCurrentPage("#projects");
+                document.getElementById("projects")?.scrollIntoView({
                   behavior: "smooth",
                 });
               }}
