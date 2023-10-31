@@ -10,8 +10,8 @@ export default function Projects() {
       <div className="w-full grid p-6 gap-5 grid-cols-12 min-h-[24rem]">
         <div className="sm:col-span-5 col-span-12 relative h-36 w-full sm:h-full sm:order-1">
           <Image
-            src={"/projects.png"}
-            alt="Image of a person helping another"
+            src={"/basketball.jpg"}
+            alt="Image of a group of basketball players"
             layout="fill"
             objectFit="cover"
             className="object-center z-0"
@@ -36,8 +36,8 @@ export default function Projects() {
       <div className="w-full grid p-6 gap-5 grid-cols-12 min-h-[24rem]">
         <div className="sm:col-span-5 col-span-12 relative h-36 w-full sm:h-full sm:order-2">
           <Image
-            src={"/projects.png"}
-            alt="Image of a person helping another"
+            src={"/soccerphoto.png"}
+            alt="Image of a group of soccer players"
             layout="fill"
             objectFit="cover"
             className="object-center z-0"
@@ -58,10 +58,11 @@ export default function Projects() {
       <div className="w-full grid p-6 gap-5 grid-cols-12 min-h-[24rem]">
         <div className="sm:col-span-5 col-span-12 relative h-36 w-full sm:h-full sm:order-1">
           <Image
-            src={"/projects.png"}
-            alt="Image of a person helping another"
+            src={"/tennis.jpg"}
+            alt="Image of a group of tennis players"
             layout="fill"
             objectFit="cover"
+            objectPosition="right"
             className="object-center z-0"
           />
         </div>

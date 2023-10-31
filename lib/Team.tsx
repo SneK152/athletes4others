@@ -7,7 +7,7 @@ export default function Team() {
       <h1 className="font-sans text-white uppercase text-5xl text-center font-bold">
         Meet the Team
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-5 md:gap-5 place-items-center items-start py-5 px-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 2xl:grid-cols-7 gap-5 md:gap-5 place-items-center items-start py-5 px-3">
         {[
           ["President", "Harsha Kadiyala"],
           ["VP of Operations", "Samir Mehra"],
