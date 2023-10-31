@@ -34,7 +34,7 @@ export default function Opportunities() {
           )
         )}
       </div>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 pb-2">
         <a
           className="bg-blue-dark px-10 font-sans text-lg py-2 my-2 block rounded-lg text-white hover:bg-pink-light hover:text-black transition-colors duration-300"
           href="https://docs.google.com/forms/d/e/1FAIpQLSdK48jNJZFHAZUXeQPJp1TyVihrpBmg1HzDyvNz9pTXTtX7vA/viewform?usp=sf_link"
