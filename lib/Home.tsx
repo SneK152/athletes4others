@@ -27,10 +27,10 @@ export default function Home() {
           Tuesday Brunch in Room 503
         </h2>
         <p className="text-white text-2xl italic font-normal font-opensans text-center max-w-[60ch]">
-          Providing Lynbrook students with opportunities to coach athletics for
+          providing students with the opportunity to enrich
           <span className="text-pink-light"> underprivileged</span> and
           <span className="text-pink-light"> underrepresented</span> youth
-          communities.
+          communities through athletics
         </p>
         <br />
         <div className="flex w-full flex-col gap-5 md:flex-row">

@@ -7,13 +7,13 @@ import { Metadata } from "next";
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-open",
 });
 
 const opensans = Open_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-open",
+  variable: "--font-inter",
 });
 
 const mont = localFont({
